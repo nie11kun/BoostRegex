@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		A948885820E51C73002D49C8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A948885720E51C73002D49C8 /* main.cpp */; };
+		A948886620E52011002D49C8 /* libboost_regex.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A948886520E52010002D49C8 /* libboost_regex.a */; };
+		A948886820E5202E002D49C8 /* libboost_system.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A948886720E5202E002D49C8 /* libboost_system.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		A948885420E51C73002D49C8 /* TestRegex */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TestRegex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A948885720E51C73002D49C8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A948886520E52010002D49C8 /* libboost_regex.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_regex.a; path = ../../../../../usr/local/Cellar/boost/1.67.0_1/lib/libboost_regex.a; sourceTree = "<group>"; };
+		A948886720E5202E002D49C8 /* libboost_system.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost_system.a; path = ../../../../../usr/local/Cellar/boost/1.67.0_1/lib/libboost_system.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A948886820E5202E002D49C8 /* libboost_system.a in Frameworks */,
+				A948886620E52011002D49C8 /* libboost_regex.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				A948885620E51C73002D49C8 /* TestRegex */,
 				A948885520E51C73002D49C8 /* Products */,
+				A948885E20E51D5D002D49C8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,15 @@
 				A948885720E51C73002D49C8 /* main.cpp */,
 			);
 			path = TestRegex;
+			sourceTree = "<group>";
+		};
+		A948885E20E51D5D002D49C8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A948886720E5202E002D49C8 /* libboost_system.a */,
+				A948886520E52010002D49C8 /* libboost_regex.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +255,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4R654B6GSN;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.67.0_1/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.67.0_1/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,6 +266,8 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4R654B6GSN;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/boost/1.67.0_1/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/Cellar/boost/1.67.0_1/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
